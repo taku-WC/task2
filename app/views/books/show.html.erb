@@ -1,0 +1,15 @@
+<% if flash[:success_notice] %> <!-- 判定をしているだけ　successfullyの意味ではない-->
+   <div class="flash">
+   <%= flash[:success_notice] %>
+   </div>
+<% end %>
+
+
+
+<p><strong>Title:</strong><%= @book.title %></p>
+
+<p><strong>Body:</strong><%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+"|"
+<%= link_to "Back", books_path %>
